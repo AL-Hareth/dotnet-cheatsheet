@@ -45,7 +45,7 @@ export default component$(() => {
 });
 
 const TodosList = component$<{ todos: Todo[] }>(({ todos }) => {
-    return <>{todos.map((todo) => <CommandCard title={todo.title} command={todo.command} description={todo.description} />)}</>;
+    return <>{todos.map((todo) => <CommandCard key={todo.title} title={todo.title} command={todo.command} description={todo.description} />)}</>;
 });
 
 export const head: DocumentHead = {
