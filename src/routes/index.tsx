@@ -1,4 +1,4 @@
-import { Signal, component$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { routeLoader$, type DocumentHead, routeAction$ } from "@builder.io/qwik-city";
 import { createServerClient } from "supabase-auth-helpers-qwik";
 import { AddTodoForm } from "~/components/AddTodoForm";
