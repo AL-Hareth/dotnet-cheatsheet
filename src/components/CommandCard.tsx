@@ -1,4 +1,4 @@
-import { $, component$, useContext, useOn, useStore } from '@builder.io/qwik';
+import { $, component$, useContext, useOn } from '@builder.io/qwik';
 import { CopyAlertContext } from '~/context/CopyContext';
 import type { Todo } from '~/types';
 

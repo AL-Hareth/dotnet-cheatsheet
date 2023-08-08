@@ -1,4 +1,4 @@
-import { component$, Slot, useContext, useContextProvider, useStore } from "@builder.io/qwik";
+import { component$, Slot, useContextProvider, useStore } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { CopiedText } from "~/components/CopiedText";
 import { CopyAlertContext } from "~/context/CopyContext";
