@@ -1,10 +1,11 @@
-import { component$ } from '@builder.io/qwik';
+import { $, component$, useSignal } from '@builder.io/qwik';
 import { Form } from '@builder.io/qwik-city';
 import { useAddTodo } from '~/routes';
 
 export const AddTodoForm = component$(() => {
     const addTodo = useAddTodo();
     const inputStyle = "bg-gray-800 px-4 py-2 my-3 rounded-lg";
+
     return <Form action={addTodo} class="flex flex-col border border-gray-600 px-4 py-2 mb-4">
         <input
             placeholder='Title'
