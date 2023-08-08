@@ -30,6 +30,6 @@ export const CommandCard = component$<Todo>(({ title, description, command }) =>
     return <div class="bg-gray-950 px-4 py-2 my-2 rounded-lg">
         <h1 class="text-xl my-2">{title}</h1>
         <p class="text-gray-400 my-2">{description}</p>
-        <pre class="mb-2 bg-gray-700 px-4 py-2 rounded-md">$ <code dangerouslySetInnerHTML={editedCommand}></code></pre>
+        <pre class="mb-2 bg-gray-700 px-4 py-2 rounded-md overflow-x-scroll">$ <code dangerouslySetInnerHTML={editedCommand}></code></pre>
     </div>
 });
