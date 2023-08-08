@@ -1,5 +1,7 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, useContext, useContextProvider, useStore } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import { CopiedText } from "~/components/CopiedText";
+import { CopyAlertContext } from "~/context/CopyContext";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
     // Control caching for this request for best performance and to reduce hosting costs:
@@ -13,7 +15,14 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-    return <main class="container p-6 mx-auto">
-        <Slot />
-    </main>;
+
+    const copy = useStore({ visible: false });
+    useContextProvider(CopyAlertContext, copy);
+
+    return <>
+        {copy.visible && <CopiedText />}
+        <main class="container p-6 mx-auto">
+            <Slot />
+        </main>
+    </>;
 });

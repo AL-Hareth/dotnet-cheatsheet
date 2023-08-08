@@ -39,6 +39,10 @@ export default component$(() => {
     const todos = useTodos();
 
     return <>
+        <h1 class="text-6xl text-center font-extrabold py-6">
+            <span class="inline-block bg-gradient-to-r from-blue-600 to-pink-500 via-emerald-400 text-transparent bg-clip-text">DotNet</span>
+            Commands CheatSheet
+        </h1>
         <AddTodoForm />
         <TodosList todos={todos.value} />
     </>;
